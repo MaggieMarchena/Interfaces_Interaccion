@@ -403,6 +403,11 @@ let filter = new Filter();
 let pencil = new Pencil();
 let eraser = new Eraser();
 let mouse = new Mouse();
+let originalImage = {};
+let x = 0;
+let y = 0;
+let width = 0;
+let height = 0;
 
 $(document).ready( function() {
 
@@ -446,13 +451,23 @@ $(document).ready( function() {
     reader.onload = function(event) {
       let img = new Image();
       img.onload = function() {
+        originalImage = img;
         let values = fitImage(img);
+        width = values.imageWidth;
+        height = values.imageHeight;
+        x = values.x;
+        y = values.y;
         context.drawImage(img, values.x, values.y, values.imageWidth, values.imageHeight);
         filter.setImageData(values.x, values.y, values.imageWidth, values.imageHeight);
       };
       img.src = event.target.result;
     };
     reader.readAsDataURL(e.target.files[0]);
+  });
+
+  $("#reset").on('click', function (e) {
+    e.preventDefault();
+    context.drawImage(originalImage, x, y, width, height);
   });
 
   $("#start").on('click', loadCanvas());
