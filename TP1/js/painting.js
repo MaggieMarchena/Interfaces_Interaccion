@@ -468,6 +468,7 @@ $(document).ready( function() {
   $("#reset").on('click', function (e) {
     e.preventDefault();
     context.drawImage(originalImage, x, y, width, height);
+    filter.setImageData(x, y, width, height);
   });
 
   $("#start").on('click', loadCanvas());
