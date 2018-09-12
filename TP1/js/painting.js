@@ -487,9 +487,7 @@ $(document).ready( function() {
 
   $("#start").on('click', loadCanvas());
 
-  $("#save").on('click', function() {
-    saveImage();
-  });
+  $("#save").on('click', saveImage());
 
   $("#pencil").on('click', function() {
     $('.tools').removeClass('active');
