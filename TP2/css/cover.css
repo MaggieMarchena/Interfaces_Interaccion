@@ -103,11 +103,25 @@ body {
 #canvas {
   background-image: url("../images/back.png");
 }
-.grabbing {
-  cursor: pointer;
+#winner1{
+  width: 146px;
+  height: 175px;
+  position: absolute;
+  left: 110px;
+  top: 90px;
 }
-.blocked {
-  cursor: no-drop;
+#winner2{
+  width: 146px;
+  height: 175px;
+  position: absolute;
+  left: 870px;
+  top: 90px;
+}
+.hidden{
+  visibility: hidden;
+}
+.visible{
+  visibility: visible;
 }
 
 
