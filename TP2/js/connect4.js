@@ -278,7 +278,9 @@ class Game {
       context.drawImage(img, currentX - RADIUS, currentY - RADIUS, CHIP_SIZE, CHIP_SIZE);
     }
     else {
-      canvas.style.cursor = 'url("images/blocked.png") 0 0,default';
+      this.mouse.setClick(false);
+      context.clearRect((lastX - RADIUS - 5), (lastY - RADIUS - 5), CHIP_SIZE + 20, CHIP_SIZE + 20);
+      canvas.style.cursor = "url('images/blocked.png')";
     }
 
     this.mouse.update();
@@ -495,7 +497,7 @@ function loadGame() {
   winner1.classList.add("hidden");
   winner2.classList.add("hidden");
   boardX = (canvas.width / 2) - (boardWidth / 2);
-  boardY = (canvas.height / 2) - (boardHeight / 2) + 20;
+  boardY = (canvas.height / 2) - (boardHeight / 2) + 70;
   tileWidth = Math.round(boardWidth / 7);
   tileHeight = boardHeight / 6;
   chipYellowX = (boardX/2) - (CHIP_SIDE_WIDTH/2);

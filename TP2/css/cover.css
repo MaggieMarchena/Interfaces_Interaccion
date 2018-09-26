@@ -101,21 +101,21 @@ body {
   padding: 0;
 }
 #canvas {
-  background-image: url("../images/back.png");
+  background-image: url("../images/back2.png");
 }
 #winner1{
   width: 146px;
   height: 175px;
   position: absolute;
   left: 230px;
-  top: 90px;
+  top: 220px;
 }
 #winner2{
   width: 146px;
   height: 175px;
   position: absolute;
   left: 990px;
-  top: 90px;
+  top: 220px;
 }
 .hidden{
   visibility: hidden;
