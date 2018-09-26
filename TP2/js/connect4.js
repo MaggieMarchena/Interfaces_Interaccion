@@ -272,7 +272,7 @@ class Game {
 
     if ((currentX > limitLeft) && (currentX < limitRight) && (currentY > limitTop) && (currentY < limitBottom)) {
       if (lastX != null && lastY != null) {
-        context.clearRect((lastX - RADIUS - 5), (lastY - RADIUS - 5), CHIP_SIZE + 20, CHIP_SIZE + 20);
+        context.clearRect((lastX - RADIUS - 10), (lastY - RADIUS - 10), CHIP_SIZE + 40, CHIP_SIZE + 40);
       }
 
       context.drawImage(img, currentX - RADIUS, currentY - RADIUS, CHIP_SIZE, CHIP_SIZE);
@@ -289,7 +289,7 @@ class Game {
   dropChip(e){
     let lastX = this.mouse.getLastX();
     let lastY = this.mouse.getLastY();
-    context.clearRect((lastX - RADIUS - 5), (lastY - RADIUS - 5), CHIP_SIZE + 20, CHIP_SIZE + 20);
+    context.clearRect((lastX - RADIUS - 10), (lastY - RADIUS - 10), CHIP_SIZE + 40, CHIP_SIZE + 40);
     canvas.style.cursor = "default";
     if ((this.mouse.getLastX() > boardX) && (this.mouse.getLastX() < boardX + boardWidth) && (this.mouse.getLastY() < boardY) && (this.mouse.getLastY() > 0)) {
       let column = this.getColumn();
