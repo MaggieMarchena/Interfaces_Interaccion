@@ -236,7 +236,6 @@ class Game {
       x = centerChipRedX - RADIUS;
       img = red;
     }
-
     context.drawImage(img, x, y, CHIP_SIZE, CHIP_SIZE);
   }
 
@@ -369,7 +368,9 @@ class Game {
   }
 
   checkDiagonals(column, row){
-    if (this.checkDiagonal1(column, row) || this.checkDiagonal2(column, row)) {
+    let diagonal1 = this.checkDiagonal1(column, row);
+    let diagonal2 = this.checkDiagonal2(column, row);
+    if (diagonal1 || diagonal2) {
       return true;
     }
     return false;
@@ -384,7 +385,7 @@ class Game {
       baseCol--;
       baseRow--;
     }
-    while ((counter < LINE) && (baseCol < MAXCOL-1) && (baseRow < MAXROW-1)) {
+    while ((counter < LINE) && (baseCol <= MAXCOL-1) && (baseRow <= MAXROW-1)) {
       let tile = this.board.getTile(baseCol, baseRow);
       if (tile.isFilled()) {
         if (tile.getPlayer() == this.currentPlayer) {
@@ -398,7 +399,7 @@ class Game {
         }
       }
       else {
-        return false;
+        counter = 0;
       }
       baseCol++;
       baseRow++;
@@ -415,7 +416,7 @@ class Game {
       baseCol--;
       baseRow++;
     }
-    while ((counter < LINE) && (baseCol < MAXCOL-1) && (baseRow > 0)) {
+    while ((counter < LINE) && (baseCol <= MAXCOL-1) && (baseRow >= 0)) {
       let tile = this.board.getTile(baseCol, baseRow);
       if (tile.isFilled()) {
         if (tile.getPlayer() == this.currentPlayer) {
@@ -429,7 +430,7 @@ class Game {
         }
       }
       else {
-        return false;
+        counter = 0;
       }
       baseCol++;
       baseRow--;
@@ -471,6 +472,10 @@ let game = null;
 $(document).ready( function() {
 
   loadGame();
+  game = new Game();
+  yellow.onload = function() {
+    game.showChip();
+  };
 
   addEventListeners();
 
@@ -478,6 +483,8 @@ $(document).ready( function() {
     e.preventDefault();
     context.clearRect(0, 0, canvas.width, canvas.height);
     loadGame();
+    game = new Game();
+    game.showChip();
   });
 
 });
@@ -498,11 +505,6 @@ function loadGame() {
   centerChipY = (boardY + (tileHeight/2));
   centerChipYellowX = boardX/2;
   centerChipRedX = boardX + boardWidth + (boardX/2);
-
-  game = new Game();
-  yellow.onload = function() {
-    game.showChip();
-  };
 }
 
 function addEventListeners() {
