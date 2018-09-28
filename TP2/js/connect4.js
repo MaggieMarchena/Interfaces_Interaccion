@@ -175,6 +175,7 @@ class Game {
     this.board = new Board();
     this.mouse = new Mouse();
     this.counter = 0;
+    this.movementCounter = 0;
   }
 
   getMouse(){
@@ -195,6 +196,7 @@ class Game {
     tile.putChip(this.currentPlayer);
     this.currentPlayer.useChip();
     this.counter++;
+    this.movementCounter = 0;
     if (this.counter > 6) {
       if (this.checkColumn(column) || this.checkRow(row) || this.checkDiagonals(column, row)) {
         this.winner = this.currentPlayer;
@@ -259,18 +261,26 @@ class Game {
     let limitLeft;
     let limitRight;
     let img;
+    let chipX;
+    let chipY = centerChipY;
     if (this.currentPlayer.getColor() == YELLOW) {
       limitLeft = 0;
       limitRight = boardX + boardWidth;
       img = yellow;
+      chipX = centerChipYellowX;
     }
     else {
       limitLeft = boardX;
       limitRight = canvas.width;
       img = red;
+      chipX = centerChipRedX;
     }
 
     if ((currentX > limitLeft) && (currentX < limitRight) && (currentY > limitTop) && (currentY < limitBottom)) {
+      if (this.movementCounter == 0) {
+        context.clearRect((chipX - RADIUS - 20), (chipY - RADIUS - 20), CHIP_SIZE + 40, CHIP_SIZE + 40);
+        this.movementCounter++;
+      }
       if (lastX != null && lastY != null) {
         context.clearRect((lastX - RADIUS - 5), (lastY - RADIUS - 5), CHIP_SIZE + 10, CHIP_SIZE + 10);
       }
