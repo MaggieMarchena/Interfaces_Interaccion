@@ -249,11 +249,11 @@ class Game {
 
     let limitTop = 0;
     let limitBottom;
-    if (((currentX > 0) && (currentX < boardX)) || (((currentX > boardX + boardWidth) && (currentX < canvas.width)))) {
+    if (((currentX > 0) && (currentX < boardX - RADIUS)) || (((currentX > boardX + boardWidth + RADIUS) && (currentX < canvas.width)))) {
       limitBottom = boardY + tileHeight;
     }
     else {
-      limitBottom = boardY;
+      limitBottom = boardY - RADIUS - 5;
     }
 
     let limitLeft;
@@ -272,15 +272,15 @@ class Game {
 
     if ((currentX > limitLeft) && (currentX < limitRight) && (currentY > limitTop) && (currentY < limitBottom)) {
       if (lastX != null && lastY != null) {
-        context.clearRect((lastX - RADIUS - 10), (lastY - RADIUS - 10), CHIP_SIZE + 40, CHIP_SIZE + 40);
+        context.clearRect((lastX - RADIUS - 5), (lastY - RADIUS - 5), CHIP_SIZE + 10, CHIP_SIZE + 10);
       }
 
       context.drawImage(img, currentX - RADIUS, currentY - RADIUS, CHIP_SIZE, CHIP_SIZE);
     }
     else {
       this.mouse.setClick(false);
-      context.clearRect((lastX - RADIUS - 5), (lastY - RADIUS - 5), CHIP_SIZE + 20, CHIP_SIZE + 20);
-      canvas.style.cursor = "url('images/blocked.png')";
+      context.clearRect((lastX - RADIUS - 5), (lastY - RADIUS - 5), CHIP_SIZE + 10, CHIP_SIZE + 10);
+      this.mouse.resetCurrent();
     }
 
     this.mouse.update();
@@ -289,12 +289,22 @@ class Game {
   dropChip(e){
     let lastX = this.mouse.getLastX();
     let lastY = this.mouse.getLastY();
-    context.clearRect((lastX - RADIUS - 10), (lastY - RADIUS - 10), CHIP_SIZE + 40, CHIP_SIZE + 40);
-    canvas.style.cursor = "default";
-    if ((this.mouse.getLastX() > boardX) && (this.mouse.getLastX() < boardX + boardWidth) && (this.mouse.getLastY() < boardY) && (this.mouse.getLastY() > 0)) {
-      let column = this.getColumn();
-      if (this.columnNotFull(column)){
-        this.playTurn(column);
+
+    if (lastX != null && lastY != null) {
+
+      context.clearRect((lastX - RADIUS - 5), (lastY - RADIUS - 5), CHIP_SIZE + 10, CHIP_SIZE + 10);
+
+      if ((this.mouse.getLastX() > boardX) && (this.mouse.getLastX() < boardX + boardWidth) && (this.mouse.getLastY() < boardY) && (this.mouse.getLastY() > 0)) {
+        let column = this.getColumn();
+        if (this.columnNotFull(column)){
+          this.playTurn(column);
+        }
+        else {
+          this.showChip();
+        }
+      }
+      else {
+        this.showChip();
       }
     }
     else {
