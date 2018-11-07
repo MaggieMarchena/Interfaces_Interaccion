@@ -23,7 +23,7 @@ body{
 }
 
 #new-game{
-  position: absolute;
+  position: relative;
   top: 255px;
   left: 735px;
   color: red;
