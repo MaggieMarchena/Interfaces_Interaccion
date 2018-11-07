@@ -1,0 +1,43 @@
+#ghost{
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  z-index: 1;
+}
+
+.ghost1{
+  left: 205px;
+}
+
+.ghost2{
+  left: 269px;
+}
+
+.ghost3{
+  left: 333px;
+}
+
+.move{
+  background-image: url("../../images/ghost.gif");
+  animation: ghost-move 2s steps(50);
+}
+
+@keyframes ghost-move {
+  0% {top: 0px;}
+  100% {top: 200px;}
+}
+
+.pass{
+  background-image: url("../../images/ghost.gif");
+  animation: ghost-pass 2s steps(24);
+}
+
+@keyframes ghost-pass {
+  0% {top: 190px;}
+  100% {top: 400px;}
+}
+
+.collide{
+  top: 200px;
+  background-image: url("../../images/ghost.gif");
+}

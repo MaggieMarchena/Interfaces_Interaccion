@@ -1,0 +1,49 @@
+body{
+  background-color: #212121;
+}
+
+#page-container{
+  width: 98%;
+}
+
+#header{
+  height: 130px;
+  width: 100%;
+  background-image: url("../images/header.png");
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#game-card{
+  width: 900px;
+  height: 568px;
+  background-image: url("../images/game-card.png");
+  background-repeat: no-repeat;
+}
+
+#new-game{
+  position: absolute;
+  top: 260px;
+  left: 745px;
+  color: red;
+  opacity: 0;
+}
+
+#score-display{
+  text-align: center;
+  position: relative;
+  width: 40px;
+  top: 310px;
+  left: 742px;
+  color: red;
+}
+
+.score-container{
+  align-content: center;
+}
+
+#score{
+  position: relative;
+
+}
