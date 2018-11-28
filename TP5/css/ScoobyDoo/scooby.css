@@ -1,0 +1,81 @@
+#scooby{
+  position: absolute;
+  height: 84px;
+  width: 62px;
+  top: 200px;
+  z-index: 1;
+}
+
+.scooby-idle{
+  background-image: url("../../images/Scooby-Doo/scooby-walk.png");
+}
+
+.scooby-walk{
+  background-image: url("../../images/Scooby-Doo/scooby-walk.png");
+  animation: scooby-walk 1s steps(8) infinite;
+}
+
+@keyframes scooby-walk {
+   100% { background-position: 0px 672px; }
+}
+
+.scooby-jump-1to2{
+  background-image: url("../../images/Scooby-Doo/scooby-jump-right.png");
+  animation-name: scooby-jump, scooby-move-center;
+  animation-duration: 0.75s, 0.75s;
+  animation-timing-function: steps(4);
+  animation-iteration-count: 1, 1;
+}
+
+.scooby-jump-2to3{
+  background-image: url("../../images/Scooby-Doo/scooby-jump-right.png");
+  animation-name: scooby-jump, scooby-move-2to3;
+  animation-duration: 0.75s, 0.75s;
+  animation-timing-function: steps(4);
+  animation-iteration-count: 1, 1;
+}
+
+.scooby-jump-3to2{
+  background-image: url("../../images/Scooby-Doo/scooby-jump-left.png");
+  animation-name: scooby-jump, scooby-move-center;
+  animation-duration: 0.75s, 0.75s;
+  animation-timing-function: steps(4);
+  animation-iteration-count: 1, 1;
+}
+
+.scooby-jump-2to1{
+  background-image: url("../../images/Scooby-Doo/scooby-jump-left.png");
+  animation-name: scooby-jump, scooby-move-2to1;
+  animation-duration: 0.75s, 0.75s;
+  animation-timing-function: steps(4);
+  animation-iteration-count: 1, 1;
+}
+
+@keyframes scooby-jump {
+ 100% { background-position: -248px 0px;}
+}
+
+@keyframes scooby-move-center {
+ 100% {left: 253px;}
+}
+
+@keyframes scooby-move-2to3 {
+ 100% {left: 317px;}
+}
+
+@keyframes scooby-move-2to1 {
+ 100% {left: 217px;}
+}
+
+.scooby-faint{
+  background-image: url("../../images/Scooby-Doo/scooby-faint.png");
+  animation: scooby-faint 0.75s steps(4) 1;
+}
+
+@keyframes scooby-faint {
+ 100% { background-position: -248px 0px;}
+}
+
+.scooby-fainted{
+  background-image: url("../../images/Scooby-Doo/scooby-fainted.png");
+}

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Game Central</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/ScoobyDoo/game.css">
+    <link rel="stylesheet" href="css/ScoobyDoo/scooby.css">
+    <link rel="stylesheet" href="css/ScoobyDoo/ghost.css">
+    <link rel="stylesheet" href="css/ScoobyDoo/snack.css">
+    <link rel="stylesheet" href="css/page.css">
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+
+      <header>
+
+        <div class="row">
+          <div class="col-3">
+            <div class="row">
+              <div class="col-3 container-logo">
+                <a href="home.html"><img class="logoGC img-fluid" src="images/logo.png" alt="Game Central"></a>
+              </div>
+              <div class="col-9 container-name">
+                <a href="home.html"><img class="nameGC img-fluid" src="images/name.png" alt="Game Central"></a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-6">
+            <div class="row container-search">
+              <div class="col-10 container-search-input">
+                <input id="search-input" class="form-control input-lg" placeholder="Search games, reviews, users..." autocomplete="off" spellcheck="false" autocorrect="off" tabindex="1">
+              </div>
+              <div class="col-2 container-filter">
+                <button class="btn btn-filter" type="button">
+                  <i class="fas fa-filter"></i>
+                  <a class="dropdown-toggle" href="" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                      <select class="form-control">
+                        <option>Category</option>
+                      </select>
+                      <select class="form-control">
+                        <option>Age</option>
+                      </select>
+                      <select class="form-control">
+                        <option>Pricing</option>
+                      </select>
+                      <select class="form-control">
+                        <option>Play mode</option>
+                      </select>
+                    </div>
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="row container-menu">
+              <div class="col-2">
+
+              </div>
+              <div class="col-4 language">
+                <h4>
+                  <a class="nav-link dropdown-toggle" href="" id="dropdown02" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EN</a>
+                  <div class="dropdown-menu" aria-labelledby="dropdown02">
+                    <a class="dropdown-item" href="#">Español</a>
+                    <a class="dropdown-item" href="#">English</a>
+                  </div>
+                </h4>
+
+              </div>
+              <div class="col-6 user">
+                <h4>Maggie1411 <i class="fas fa-bars"></i></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row container-nav">
+          <div class="col container-nav-link">
+            <a class="nav-link-able" href="gameList.html"><h4 class="nav-topic">HOT DEALS</h4></a>
+          </div>
+          <div class="col container-nav-link">
+            <h4 class="nav-topic">Play Online</h4>
+          </div>
+          <div class="col container-nav-link">
+            <h4 class="nav-topic">Download</h4>
+          </div>
+          <div class="col container-nav-link">
+            <h4 class="nav-topic">Reviews</h4>
+          </div>
+        </div>
+
+      </header>
+
+      <section class="container-breadcrumb">
+        <div class="row">
+          <div class="col-1">
+
+          </div>
+          <div class="col-10">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="breadcrumb-item" href="#">Home</a></li>
+              <li class="breadcrumb-item"><a class="breadcrumb-item" href="#">Featured</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Scooby Doo in the forest</li>
+            </ol>
+          </div>
+          <div class="col-1">
+
+          </div>
+        </div>
+
+      </section>
+
+      <section class="game">
+
+        <div class="row container-section">
+          <div class="col-1">
+
+          </div>
+          <div class="col-10">
+            <div class="card">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-8">
+                    Scooby Doo in the forest
+                  </div>
+                  <div class="col-4 container-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="row container-fluid container-within-card-body">
+                  <div class="col-9 container-game">
+                    <div class="container justify-content-center" id="game-container">
+                      <div class="" id="scooby">
+
+                      </div>
+                      <div class="" id="ghost">
+
+                      </div>
+                      <div class="" id="snack">
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3 container-game-info">
+                    <div class="row container-description">
+                      <div class="col-12">
+                        <p>Scooby wandered into the forest, help him find all the Scooby-Snacks! But be careful, don't let the ghosts get him!</p>
+                      </div>
+                    </div>
+                    <div class="row container-new-game-button">
+                      <div class="col-12">
+                        <button class="new-game" type="button" name="new-game" id="new-game">NEW GAME</button>
+                      </div>
+                    </div>
+                    <div class="row container-score">
+                      <div class="col-12">
+                        <div class="score-display">
+                          <div>
+                            <h4 id="score"></h4>
+                          </div>
+                          <h4>Points</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row container-fluid container-within-card-body">
+                  <div class="row inner-title container-fluid container-within-card-body">
+                    <div class="col-12">
+                      How to Play
+                    </div>
+                  </div>
+                  <div class="row container-fluid container-within-card-body container-game-info">
+                    <div class="col-9">
+                      <div class="row">
+                        <div class="col-2">
+
+                        </div>
+                        <div class="col-8">
+                          <ul>
+                            <li class="info-item"><i class="far fa-dot-circle"></i> Use right arrow to make Scooby jump to the right</li>
+                            <li class="info-item"><i class="far fa-dot-circle"></i> Use left arrow to make Scooby jump to the left</li>
+                          </ul>
+                        </div>
+                        <div class="col-2">
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="row">
+                        <div class="col-5">
+
+                        </div>
+                        <div class="col-2">
+                          <ul>
+                            <li><i class="fas fa-arrow-circle-right"></i></li>
+                            <li><i class="fas fa-arrow-circle-left"></i></li>
+                          </ul>
+                        </div>
+                        <div class="col-5">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-1">
+
+          </div>
+        </div>
+
+      </section>
+
+      <section class="more">
+
+        <div class="row container-section">
+          <div class="col-1">
+
+          </div>
+          <div class="col-10">
+            <div class="card">
+              <div class="card-header">
+                <div class="row">
+                  <div class="col-8">
+                    More about Scooby Doo in the forest
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="row container-fluid container-within-card-body">
+                  <div class="col-4">
+                    <a class="tab" href="#">
+                      <div class="row container-tab active" id="tab-top-players">
+                        <div class="col container-fluid">
+                          <div class="row">
+                            <div class="col-3 container-icon">
+                              <i class="fas fa-star fa-2x"></i>
+                            </div>
+                            <div class="col-9">
+                              <div class="row">
+                                <div class="col inner-title">
+                                  Top Players
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col inner-text">
+                                  Play now and be number 1!
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+
+                    <a class="tab" href="#">
+                      <div class="row container-tab inactive" id="tab-comments">
+                        <div class="col container-fluid">
+                          <div class="row">
+                            <div class="col-3 container-icon">
+                              <i class="fas fa-comment fa-2x"></i>
+                            </div>
+                            <div class="col-9">
+                              <div class="row">
+                                <div class="col inner-title">
+                                  Comments
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col inner-text">
+                                  Express yourself!
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+
+                    <a class="tab" href="#">
+                      <div class="row container-tab" id="tab-goals-rewards">
+                        <div class="col container-fluid">
+                          <div class="row">
+                            <div class="col-3 container-icon">
+                              <i class="fas fa-trophy fa-2x"></i>
+                            </div>
+                            <div class="col-9">
+                              <div class="row">
+                                <div class="col inner-title">
+                                  Goals & Rewards
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col inner-text">
+                                  Progress and milestones
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+
+                    <a class="tab" href="#">
+                      <div class="row container-tab" id="tab-tutorials">
+                        <div class="col container-fluid">
+                          <div class="row">
+                            <div class="col-3 container-icon">
+                              <i class="fab fa-youtube fa-2x"></i>
+                            </div>
+                            <div class="col-9">
+                              <div class="row">
+                                <div class="col inner-title">
+                                  Tutorials
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col inner-text">
+                                  Tips, tricks ans strategy
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+
+                  </div>
+                  <div class="col-8 container-within-card-body">
+
+                    <div class="container-tab-content active" id="content-top-players">
+
+                      <div class="row container-player-info">
+                        <div class="col-2 container-player-number border-dotted">
+                          <button class="top-player-number" type="button" name="button">1</button>
+                        </div>
+                        <div class="col-2 border-dotted">
+                          <img class="avatar img-fluid" src="images/avatar-lola.jpg" alt="Lola_167">
+                        </div>
+                        <div class="col-4 border-dotted">
+                          <div class="row">
+                            <div class="col">
+                              <h3>Lola_167</h3>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                              <h4>45193 points</h4>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                              <h4>Last played: 2 hours ago</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-4 container-player-ranking border-dotted">
+                          <div class="row">
+                            <div class="col container-player-ranking-symbol">
+                              <i class="fas fa-arrow-up fa-2x"></i>
+                            </div>
+                            <div class="col container-player-ranking-info">
+                              From 2
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row container-player-info">
+                        <div class="col-2 container-player-number border-dotted">
+                          <button class="top-player-number" type="button" name="button">2</button>
+                        </div>
+                        <div class="col-2 border-dotted">
+                          <img class="avatar img-fluid" src="images/avatar-marky.jpg" alt="MarkyMark9">
+                        </div>
+                        <div class="col-4 border-dotted">
+                          <div class="row">
+                            <div class="col">
+                              <h3>MarkyMark9</h3>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                              <h4>42761 points</h4>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                              <h4>Last played: 8 hours ago</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-4 container-player-ranking border-dotted">
+                          <div class="row">
+                            <div class="col container-player-ranking-symbol">
+                              <i class="fas fa-arrow-down fa-2x"></i>
+                            </div>
+                            <div class="col container-player-ranking-info">
+                              From 1
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row container-player-info">
+                        <div class="col-2 container-player-number">
+                          <button class="top-player-number" type="button" name="button">3</button>
+                        </div>
+                        <div class="col-2">
+                          <img class="avatar img-fluid" src="images/avatar-john.jpg" alt="John_Doe">
+                        </div>
+                        <div class="col-4">
+                          <div class="row">
+                            <div class="col">
+                              <h3>John_Doe</h3>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                              <h4>39643 points</h4>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                              <h4>Last played: 3 hours ago</h4>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-4 container-player-ranking">
+                          <div class="row">
+                            <div class="col container-player-ranking-symbol">
+                              <i class="fas fa-arrow-up fa-2x"></i>
+                            </div>
+                            <div class="col container-player-ranking-info">
+                              From 5
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="container-tab-content inactive container-player-comments" id="content-comments">
+                      <div class="row container-comment">
+                        <div class="col-2">
+                          <img class="avatar img-fluid" src="images/avatar-1.jpg" alt="">
+                        </div>
+                        <div class="col-10">
+                          <div class="row">
+                            <div class="col inner-title">
+                              <span id="comment-name-1"></span>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                              <span id="comment-text-1"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row container-comment">
+                        <div class="col-2">
+                          <img class="avatar img-fluid" src="images/avatar-2.jpg" alt="">
+                        </div>
+                        <div class="col-10">
+                          <div class="row">
+                            <div class="col inner-title">
+                              <span id="comment-name-2"></span>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                              <span id="comment-text-2"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row container-comment">
+                        <div class="col-2">
+                          <img class="avatar img-fluid" src="images/avatar-3.jpg" alt="">
+                        </div>
+                        <div class="col-10">
+                          <div class="row">
+                            <div class="col inner-title">
+                              <span id="comment-name-3"></span>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                              <span id="comment-text-3"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row container-comment">
+                        <div class="col-11">
+                          <input type="text" name="" size="60" value="">
+                        </div>
+                        <div class="col-1">
+                          <button class="button-comment" type="button" name="button"><i class="fas fa-comment"></i></button>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-1">
+
+          </div>
+        </div>
+
+      </section>
+
+      <section class="similar">
+
+        <div class="row container-section">
+          <div class="col-1">
+
+          </div>
+          <div class="col-10">
+            <div class="card">
+              <div class="card-header">
+                Similar games
+              </div>
+              <div class="card-body">
+                <div class="row container-fluid container-within-card-body">
+                  <div class="col container-within-card-body">
+                    <img class="img-similar img-fluid" src="images/similar.png" alt="Similar games">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-1">
+
+          </div>
+        </div>
+      </section>
+
+      <div class="divider">
+
+      </div>
+
+      <section class="footer">
+
+        <div class="row container-section">
+          <div class="col-1">
+
+          </div>
+          <div class="col-10">
+            <div class="card no-border">
+              <img class="img-fluid" src="images/footer.png" alt="">
+            </div>
+          </div>
+          <div class="col-1">
+
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="js/GamePage.js" charset="utf-8"></script>
+    <script src="js/constants.js" charset="utf-8"></script>
+    <script src="js/game.js" charset="utf-8"></script>
+    <script src="js/scooby.js" charset="utf-8"></script>
+    <script src="js/ghost.js" charset="utf-8"></script>
+    <script src="js/snack.js" charset="utf-8"></script>
+    <script src="js/popper.min.js" charset="utf-8"></script>
+    <script src="js/holder.min.js" charset="utf-8"></script>
+  </body>
+
+</html>

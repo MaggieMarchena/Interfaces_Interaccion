@@ -1,0 +1,18 @@
+#game-container{
+  position: relative;
+  height: 295px;
+  width: 590px;
+  z-index: 0;
+}
+
+.game-idle, .game-on, .game-end{
+  background-image: url("../../images/Scooby-Doo/forest-background.png");
+}
+
+.game-on{
+  animation: background-move 3s steps(60) infinite;
+}
+
+@keyframes background-move {
+  100% { background-position: 0px 590px; }
+}

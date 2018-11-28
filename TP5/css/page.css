@@ -1,0 +1,528 @@
+body{
+  background-color: #212121;
+  font-family: "Roboto", sans-serif;
+}
+
+.container-section{
+  margin: 2em;
+}
+
+.container-logo, .container-name, .container-menu{
+  background-color: #b0001c;
+  position: relative;
+}
+
+.container-logo, .container-name, .container-search, .container-menu{
+  height: 55px;
+}
+
+.container-logo, .container-name{
+  margin: 0;
+}
+
+.container-logo{
+  padding-left: 5px;
+}
+
+.container-name{
+  padding: 0;
+}
+
+.logoGC, .nameGC{
+  border: 0;
+  float: left;
+  padding: 0;
+  position: relative;
+}
+
+.logoGC{
+  height: 55px;
+  width: 70px;
+}
+
+.nameGC{
+  height: 40px;
+  padding-top: 15px;
+  width: 240px;
+}
+
+.container-search, .container-nav{
+  background-color: #ff173c;
+  position: relative;
+}
+
+.container-search-input, .container-filter{
+  position: relative;
+  top: 8px;
+}
+
+.container-search-input{
+  left: 25px;
+}
+
+.container-filter{
+  left: 5px;
+  padding-left: 5px;
+}
+
+.btn-filter, #dropdown01{
+  background-color: white;
+  color: black;
+}
+
+.dropdown-toggle ::hover, ::after{
+  color: black;
+}
+
+.language, .user{
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.language h4, .user h4{
+  font-size: 1.25em;
+}
+
+.language{
+  top: 4px;
+}
+
+.user{
+  right: 0;
+  top: 12px;
+}
+
+#dropdown02{
+  background-color: #b0001c;
+  color: #ffc900;
+}
+
+.container-nav, .container-game-info{
+  text-align: center;
+}
+
+.nav-topic, .language, .user{
+  color: #ffc900;
+}
+
+.nav-topic{
+  padding-top: 5px;
+}
+
+.container-breadcrumb{
+  border: 0;
+  margin-top: 10px;
+  position: relative;
+}
+
+.breadcrumb{
+  background-color: #212121;
+  position: relative;
+}
+
+.breadcrumb-item{
+  color: #ffc900;
+}
+
+.breadcrumb-item.active{
+  color: #ffd849;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  color: #ffc900;
+  content: ">";
+}
+
+.card{
+  border-color: #ff0028;
+  border-style: solid;
+}
+
+.card-header{
+  background-color: #ff0028;
+  color: black;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.container-rating{
+  color: #ffc900;
+  text-align: right;
+}
+
+.card-body{
+  padding: 0;
+}
+
+.container-within-card-body{
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.container-game{
+  background-color: black;
+  padding: 3em;
+}
+
+.container-game-info{
+  background-color: #424242;
+  color: white;
+  padding-top: 1em;
+  text-align: justify;
+  text-align-last: center;
+  vertical-align: middle;
+}
+
+.container-description{
+  padding-top: 1em;
+}
+
+.container-new-game-button{
+  padding-top: 3em;
+}
+
+.new-game{
+  background-color: #ffc900;
+  border: 1px solid #ffc900;
+  border-radius: 50px;
+  color: black;
+  font-weight: bold;
+  padding: 0.25em;
+}
+
+.new-game:focus {outline:0;}
+
+.container-score{
+  color: #b0001c;
+  padding-top: 4em;
+}
+
+.inner-title{
+  background-color: #b0001c;
+  color: white;
+  width: 100%;
+}
+
+.inner-text{
+  padding-top: 5px;
+}
+
+.container-tab{
+  background-color: #424242;
+  color: white;
+  height: 60px;
+}
+
+.container-icon{
+  align-content: center;
+  padding-top: 10px;
+  vertical-align: middle;
+}
+
+#tab-comments{
+  border-bottom: 2px solid black;
+}
+
+#tab-goals-rewards{
+  border-right: 2px solid white;
+}
+
+#tab-tutorials{
+  border-right: 2px solid white;
+  border-top: 2px solid black;
+}
+
+#tab-comments.active, #tab-top-players.active{
+  background-color: #757575;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+}
+
+#tab-comments.inactive, #tab-top-players.inactive{
+  border-right: 2px solid white;
+}
+
+.tab:hover, .tab:active, .tab:visited{
+  text-decoration: none;
+}
+
+.container-tab-content{
+  background-color: #757575;
+  border-top: 2px solid white;
+  left: 0;
+  height: 100%;
+  position: relative;
+  top: 0;
+}
+
+.container-tab-content.inactive{
+  display: none;
+}
+
+.container-tab-content.active{
+  display: block;
+}
+
+#content-top-players{
+  padding-top: 10px;
+}
+
+.container-player-info, .container-comment{
+  color: white;
+  padding: 3px 60px 1px 60px;
+}
+
+.container-player-number{
+  padding-top: 10px;
+}
+
+.top-player-number{
+  background-color: #ffc900;
+  border: 2px solid black;
+  border-radius: 50%;
+  color: black;
+  font-size: 1.5em;
+  font-weight: bold;
+  height: 50px;
+  width: 50px;
+}
+
+.top-player-number:focus{
+  outline: 0;
+}
+
+.avatar{
+  max-height: 59px;
+  padding-top: 10px;
+}
+
+.container-player-info:hover{
+  transform: scale3d(1.1, 1.1, 1.3);
+}
+
+.container-player-info h3{
+  color: #b0001c;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.container-player-info h4{
+  font-size: 0.75em;
+}
+
+.border-dotted{
+  border-bottom: 1px dotted white;
+}
+
+.container-player-ranking{
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+.container-player-ranking-symbol{
+  padding: 15px;
+}
+
+.container-player-ranking-info{
+  padding: 22px;
+}
+
+.fa-arrow-up{
+  color: #07f404;
+}
+
+.fa-arrow-down{
+  color: #ff173c;
+}
+
+.container-comment{
+  padding-bottom: 0;
+  padding-top: 5px;
+}
+
+.button-comment{
+  background-color: #ffc900;
+  border: 1px solid #ffc900;
+  color: black;
+}
+
+.img-similar{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.divider{
+  border-bottom: 2px solid #ff0028;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 2em;
+  width: 100%;
+}
+
+.no-border{
+  border: 0;
+}
+
+.footer{
+  position: relative;
+  top: 25px;
+}
+
+.container-title{
+  text-align-last: left;
+}
+
+.login, .login:hover{
+  color: #ffc900;
+}
+
+.home{
+  text-align-last: left;
+}
+
+.container-game-img{
+  background-color: black;
+  text-align: center;
+}
+
+.game-img{
+  padding: 20px 20px 0 20px;;
+}
+
+.container-title{
+  color: #ff0028;
+  font-size: 1.2em;
+}
+
+.container-game-button{
+  padding: 10px 30px 5px 30px;
+}
+
+.container-price{
+  color: #ff0028;
+}
+
+.button-move-left, .button-move-right{
+  background-color: white;
+  border-radius: 50%;
+  color: black;
+  height: 35px;
+  opacity: 0.5;
+  position: relative;
+  text-align-last: center;
+  width: 35px;
+}
+
+.button-move-left{
+  left: 10px;
+  top: 170px;
+}
+
+.button-move-right{
+  left: 80px;
+}
+
+.container-dots{
+  padding-top: 5px;
+}
+
+.current{
+  border: 1px solid black;
+  color: white;
+  opacity: 0.3;
+}
+
+.next{
+  border: 1px solid black;
+  color: white;
+}
+
+.img-stretch{
+  height: 350px;
+  width: 100%;
+}
+
+.welcome{
+  color: #ffc900;
+  font-weight: bold;
+}
+
+.container-img{
+  position: relative;
+  top: 0;
+  z-index: 0;
+}
+
+.container-button-game-hidden{
+  left: 370px;
+  position: absolute;
+  top: 275px;
+  z-index: 1;
+}
+
+.button-game-hidden{
+  opacity: 0;
+}
+
+.container-filters{
+  background-color: #424242;
+  color: white;
+  padding-left: 110px;
+  padding-top: 20px;
+  text-align: left;
+}
+
+.container-filters h3{
+  color: #ffc900;
+  font-size: 1.5em;
+}
+
+.container-list{
+  background-color: #424242;
+  color: white;
+  padding: 5px 20px 5px 20px;
+}
+
+.thead-game-list{
+  font-size: 1.3em;
+  font-weight: bolder;
+}
+
+.game-list-link:hover{
+  color: white;
+  text-decoration: none;
+}
+
+.game-list-link{
+  color: white;
+}
+
+.pricing{
+  color: #ff0028;
+  font-weight: bold;
+}
+
+.nav-link-able{
+  color: #ffc900;
+}
+
+.nav-link-able:hover{
+  color: #ffc900;
+  text-decoration: none;
+}
+
+.container-nav-link{
+  transform: rotateY(0deg);
+	transition-duration: 0.5s;
+	transition-property: transform;
+}
+
+.container-nav-link:hover{
+  perspective: 5000;
+  transform: rotateY(40deg);
+}
