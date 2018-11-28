@@ -526,3 +526,16 @@ body{
   perspective: 5000;
   transform: rotateY(40deg);
 }
+
+.button-go{
+  position: relative;
+  left: 250px;
+  border-radius: 50%;
+  border: 1px solid #ffc900;
+  background-color: #ffc900;
+  color: black;
+  font-size: 0.75em;
+  font-weight: bold;
+  height: 45px;
+  width: 45px;
+}
