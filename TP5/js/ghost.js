@@ -50,4 +50,8 @@ class Ghost {
     this.element.classList.remove('pass');
     this.element.classList.add('collide');
   }
+
+  end(){
+    this.element.classList.remove('collide');
+  }
 }

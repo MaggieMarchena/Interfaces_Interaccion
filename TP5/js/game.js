@@ -61,6 +61,10 @@ class Game {
     this.state = "end";
     this.element.classList.remove("game-on");
     this.element.classList.add("game-end");
+    let ghost = this.ghost;
+    setTimeout(function () {
+      ghost.end();
+    }, 1000);
   }
 
   getScoobyLane(){
